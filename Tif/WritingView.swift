@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct WritingView: View {
+    @Environment(\.managedObjectContext) private var viewContext
+    
     @State private var who: String = ""
     @State private var what: String = ""
     @State private var when = Date()
@@ -46,7 +49,7 @@ struct WritingView: View {
             .navigationTitle("Today I felt ...")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {}) {
+                    Button(action: { addGift() }) {
                         Text("저장")
                     }
                 }
@@ -55,10 +58,32 @@ struct WritingView: View {
         }
         .navigationViewStyle(.stack)
     }
+    
+    private func addGift() {
+        withAnimation {
+            let newGift = Gift(context: viewContext)
+            newGift.who = who
+            newGift.what = what
+            newGift.when = when
+            newGift.place = place
+
+            do {
+                try viewContext.save()
+                
+                who = ""
+                what = ""
+                when = Date()
+                place = ""
+            } catch {
+                let nsError = error as NSError
+                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            }
+        }
+    }
 }
 
 struct WritingView_Previews: PreviewProvider {
     static var previews: some View {
-        WritingView()
+        WritingView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

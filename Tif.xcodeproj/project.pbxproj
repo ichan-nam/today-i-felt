@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2518F3EA281A606A00F1EF6A /* WritingInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2518F3E9281A606A00F1EF6A /* WritingInputView.swift */; };
+		25AD71AC281A719A009DEA07 /* Gift+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AD71AA281A719A009DEA07 /* Gift+CoreDataClass.swift */; };
 		25EBF8632819574100EFA9BE /* TifApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EBF8622819574100EFA9BE /* TifApp.swift */; };
 		25EBF8652819574100EFA9BE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EBF8642819574100EFA9BE /* ContentView.swift */; };
 		25EBF8672819574100EFA9BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25EBF8662819574100EFA9BE /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		2518F3E9281A606A00F1EF6A /* WritingInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingInputView.swift; sourceTree = "<group>"; };
+		25AD71AA281A719A009DEA07 /* Gift+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gift+CoreDataClass.swift"; sourceTree = "<group>"; };
 		25EBF85F2819574100EFA9BE /* Tif.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tif.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25EBF8622819574100EFA9BE /* TifApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TifApp.swift; sourceTree = "<group>"; };
 		25EBF8642819574100EFA9BE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 		25EBF8562819574100EFA9BE = {
 			isa = PBXGroup;
 			children = (
+				25AD71AA281A719A009DEA07 /* Gift+CoreDataClass.swift */,
 				25EBF8612819574100EFA9BE /* Tif */,
 				25EBF8602819574100EFA9BE /* Products */,
 			);
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25EBF86C2819574100EFA9BE /* Persistence.swift in Sources */,
+				25AD71AC281A719A009DEA07 /* Gift+CoreDataClass.swift in Sources */,
 				25EBF8652819574100EFA9BE /* ContentView.swift in Sources */,
 				25EBF8632819574100EFA9BE /* TifApp.swift in Sources */,
 				2518F3EA281A606A00F1EF6A /* WritingInputView.swift in Sources */,
