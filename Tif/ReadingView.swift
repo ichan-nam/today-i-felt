@@ -23,7 +23,7 @@ struct ReadingView: View {
                     NavigationLink {
                         Text(gift.what!)
                     } label: {
-                        Text(gift.who!)
+                        GiftRow(gift: gift)
                     }
                 }
                 .onDelete(perform: deleteGifts)
@@ -35,7 +35,10 @@ struct ReadingView: View {
     
     private func deleteGifts(offsets: IndexSet) {
         withAnimation {
-            offsets.map { gifts[$0] }.forEach(viewContext.delete)
+            offsets.map {
+                gifts[$0]
+            }
+            .forEach(viewContext.delete)
 
             do {
                 try viewContext.save()

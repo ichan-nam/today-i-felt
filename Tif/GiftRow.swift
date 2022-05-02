@@ -8,13 +8,22 @@
 import SwiftUI
 
 struct GiftRow: View {
+    let gift: Gift
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading, spacing: 8) {
+            Text(gift.who!)
+                .font(.headline)
+                .foregroundColor(Color("AccentColor"))
+            Text(gift.what!)
+                .foregroundColor(Color("LiteSlate"))
+        }
+        .padding(.vertical, 8)
     }
 }
 
+/*
 struct GiftRow_Previews: PreviewProvider {
-    static var previews: some View {
-        GiftRow()
-    }
+    GiftRow()
 }
+ */
