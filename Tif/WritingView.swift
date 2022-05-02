@@ -9,6 +9,12 @@ import SwiftUI
 import CoreData
 
 struct WritingView: View {
+    enum Field: Hashable {
+        case who
+        case what
+        case place
+    }
+    
     @Environment(\.managedObjectContext) private var viewContext
     
     @State private var who: String = ""
@@ -16,12 +22,16 @@ struct WritingView: View {
     @State private var when = Date()
     @State private var place: String = ""
     
+    @FocusState private var focusedField: Field?
+    
     var body: some View {
         NavigationView {
             VStack(spacing: 32) {
                 VStack(alignment: .leading) {
                     WritingInputView(placeholder: "그 사람", binding: $who, placeholderFont: .title, following: "의", followingFont: .title2)
+                        .focused($focusedField, equals: .who)
                     WritingInputView(placeholder: "이런 장점", binding: $what, placeholderFont: .title, following: "이", followingFont: .title2)
+                        .focused($focusedField, equals: .what)
                     Text("인상 깊었습니다.")
                         .font(.title2)
                 }
@@ -39,6 +49,7 @@ struct WritingView: View {
                         .datePickerStyle(.compact)
                         .labelsHidden()
                     WritingInputView(placeholder: "그 장소", binding: $place, placeholderFont: .title2, following: "에서", followingFont: .body)
+                        .focused($focusedField, equals: .place)
                     Text("얻은 깨달음")
                 }
                 .frame(maxWidth: .greatestFiniteMagnitude, alignment: .trailing)
@@ -48,8 +59,16 @@ struct WritingView: View {
             .navigationTitle("Today I felt ...")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: { addGift() }) {
-                        Text("저장")
+                    Button("저장") {
+                        if who.isEmpty {
+                            focusedField = .who
+                        } else if what.isEmpty {
+                            focusedField = .what
+                        } else if place.isEmpty {
+                            focusedField = .place
+                        } else {
+                            addGift()
+                        }
                     }
                 }
             }
