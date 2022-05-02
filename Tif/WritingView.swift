@@ -38,7 +38,6 @@ struct WritingView: View {
                         )
                         .datePickerStyle(.compact)
                         .labelsHidden()
-                        .foregroundColor(.yellow)
                     WritingInputView(placeholder: "그 장소", binding: $place, placeholderFont: .title2, following: "에서", followingFont: .body)
                     Text("얻은 깨달음")
                 }
