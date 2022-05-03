@@ -21,7 +21,7 @@ struct ReadingView: View {
             List {
                 ForEach(gifts) { gift in
                     NavigationLink {
-                        Text(gift.what!)
+                        GiftDetailView(gift: gift)
                     } label: {
                         GiftRow(gift: gift)
                     }
