@@ -30,7 +30,7 @@ struct WritingView: View {
                 VStack(alignment: .leading) {
                     WritingInputView(placeholder: "그 사람", binding: $who, placeholderFont: .title, following: "의", followingFont: .title2)
                         .focused($focusedField, equals: .who)
-                    WritingInputView(placeholder: "이런 장점", binding: $what, placeholderFont: .title, following: "이", followingFont: .title2)
+                    WritingInputView(placeholder: "이런 장점", binding: $what, placeholderFont: .title, following: "이/가", followingFont: .title2)
                         .focused($focusedField, equals: .what)
                     Text("인상 깊었습니다.")
                         .font(.title2)
