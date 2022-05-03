@@ -16,17 +16,24 @@ struct ReadingView: View {
         animation: .default)
     private var gifts: FetchedResults<Gift>
     
+    @State private var searchText = ""
+    
     var body: some View {
         NavigationView {
-            List {
-                ForEach(gifts) { gift in
-                    NavigationLink {
-                        GiftDetailView(gift: gift)
-                    } label: {
-                        GiftRow(gift: gift)
+            VStack {
+                SearchBar(text: $searchText)
+                    .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
+                
+                List {
+                    ForEach(gifts.filter { $0.who!.hasPrefix(searchText) || searchText == "" }) { gift in
+                        NavigationLink {
+                            GiftDetailView(gift: gift)
+                        } label: {
+                            GiftRow(gift: gift)
+                        }
                     }
+                    .onDelete(perform: deleteGifts)
                 }
-                .onDelete(perform: deleteGifts)
             }
             .navigationTitle("Gifts")
         }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2518F3EA281A606A00F1EF6A /* WritingInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2518F3E9281A606A00F1EF6A /* WritingInputView.swift */; };
 		254CFB5F2820F60000D344CD /* GiftDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254CFB5E2820F60000D344CD /* GiftDetailView.swift */; };
+		254CFB8028211CBA00D344CD /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254CFB7F28211CBA00D344CD /* SearchBar.swift */; };
 		257EBAC9281FA058002F9033 /* GiftRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EBAC8281FA058002F9033 /* GiftRow.swift */; };
 		25AD71AC281A719A009DEA07 /* Gift+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AD71AA281A719A009DEA07 /* Gift+CoreDataClass.swift */; };
 		25EBF8632819574100EFA9BE /* TifApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EBF8622819574100EFA9BE /* TifApp.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		2518F3E9281A606A00F1EF6A /* WritingInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingInputView.swift; sourceTree = "<group>"; };
 		254CFB5E2820F60000D344CD /* GiftDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftDetailView.swift; sourceTree = "<group>"; };
+		254CFB7F28211CBA00D344CD /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		257EBAC8281FA058002F9033 /* GiftRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftRow.swift; sourceTree = "<group>"; };
 		25AD71AA281A719A009DEA07 /* Gift+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gift+CoreDataClass.swift"; sourceTree = "<group>"; };
 		25EBF85F2819574100EFA9BE /* Tif.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tif.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +75,7 @@
 				25EBF87528195AD900EFA9BE /* WritingView.swift */,
 				2518F3E9281A606A00F1EF6A /* WritingInputView.swift */,
 				25EBF87728195C3A00EFA9BE /* ReadingView.swift */,
+				254CFB7F28211CBA00D344CD /* SearchBar.swift */,
 				257EBAC8281FA058002F9033 /* GiftRow.swift */,
 				254CFB5E2820F60000D344CD /* GiftDetailView.swift */,
 				25EBF8662819574100EFA9BE /* Assets.xcassets */,
@@ -170,6 +173,7 @@
 				2518F3EA281A606A00F1EF6A /* WritingInputView.swift in Sources */,
 				25EBF87828195C3A00EFA9BE /* ReadingView.swift in Sources */,
 				25EBF87628195AD900EFA9BE /* WritingView.swift in Sources */,
+				254CFB8028211CBA00D344CD /* SearchBar.swift in Sources */,
 				25EBF86F2819574100EFA9BE /* Tif.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
