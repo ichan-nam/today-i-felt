@@ -38,7 +38,6 @@ struct ReadingView: View {
             .navigationTitle("Gifts")
         }
         .navigationViewStyle(.stack)
-        .onTapGesture { hideKeyboard() }
     }
     
     private func deleteGifts(offsets: IndexSet) {
