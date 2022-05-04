@@ -26,3 +26,9 @@ extension View {
     }
 }
 #endif
+
+enum Field: Hashable {
+    case who
+    case what
+    case place
+}

@@ -9,12 +9,6 @@ import SwiftUI
 import CoreData
 
 struct WritingView: View {
-    enum Field: Hashable {
-        case who
-        case what
-        case place
-    }
-    
     @Environment(\.managedObjectContext) private var viewContext
     
     @State private var who: String = ""

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct GiftDetailView: View {
+    @State private var showingSheet = false
+    
     let gift: Gift
     
     var body: some View {
@@ -45,10 +47,11 @@ struct GiftDetailView: View {
         .navigationTitle(gift.who!)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                NavigationLink {
-                    Text("수정")
-                } label: {
-                    Text("수정")
+                Button("수정") {
+                    showingSheet.toggle()
+                }
+                .sheet(isPresented: $showingSheet) {
+                    EditingSheetView(gift: gift)
                 }
             }
         }
