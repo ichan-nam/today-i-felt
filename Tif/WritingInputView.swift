@@ -20,6 +20,7 @@ struct WritingInputView: View {
                 .font(placeholderFont)
                 .fixedSize()
                 .foregroundColor(Color("YellowSun"))
+                .disableAutocorrection(true)
             Text(following)
                 .font(followingFont)
         }
