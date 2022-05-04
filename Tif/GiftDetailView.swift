@@ -10,7 +10,7 @@ import SwiftUI
 struct GiftDetailView: View {
     @State private var showingSheet = false
     
-    let gift: Gift
+    @ObservedObject var gift: Gift
     
     var body: some View {
         VStack(spacing: 32) {

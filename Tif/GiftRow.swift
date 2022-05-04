@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GiftRow: View {
-    var gift: Gift
+    @ObservedObject var gift: Gift
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {

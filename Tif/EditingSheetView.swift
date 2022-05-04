@@ -88,6 +88,7 @@ struct EditingSheetView: View {
                     Spacer()
                 }
             }
+            .onTapGesture { hideKeyboard() }
         }
         .padding()
         .onAppear() {
