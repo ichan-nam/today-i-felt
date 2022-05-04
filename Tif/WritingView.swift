@@ -75,6 +75,7 @@ struct WritingView: View {
             .padding(EdgeInsets(top: 64, leading: 16, bottom: 16, trailing: 16))
         }
         .navigationViewStyle(.stack)
+        .onTapGesture { hideKeyboard() }
     }
     
     private func addGift() {
@@ -92,6 +93,8 @@ struct WritingView: View {
                 what = ""
                 when = Date()
                 place = ""
+                
+                hideKeyboard()
             } catch {
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
