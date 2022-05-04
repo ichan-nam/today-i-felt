@@ -12,11 +12,13 @@ struct GiftRow: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text(gift.who!)
-                .font(.headline)
-                .foregroundColor(Color("AccentColor"))
-            Text(gift.what!)
-                .foregroundColor(Color("LiteSlate"))
+            if let who = gift.who, let what = gift.what {
+                Text(who)
+                    .font(.headline)
+                    .foregroundColor(Color("AccentColor"))
+                Text(what)
+                    .foregroundColor(Color("LiteSlate"))
+            }
         }
         .padding(.vertical, 8)
     }
