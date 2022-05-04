@@ -20,11 +20,6 @@ struct EditingSheetView: View {
     
     @FocusState private var focusedField: Field?
     
-    init(gift: Gift) {
-        self.gift = gift
-        UITextView.appearance().backgroundColor = .clear
-    }
-    
     var body: some View {
         VStack(spacing: 64) {
             HStack(spacing: 24) {
@@ -57,7 +52,6 @@ struct EditingSheetView: View {
                         VStack {
                             TextEditor(text: $what)
                                 .frame(height: 200)
-                                .background(Color(.secondarySystemBackground))
                         }
                     }
                     
