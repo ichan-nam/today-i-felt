@@ -1,6 +1,3 @@
-![Logo](https://dummyimage.com/1000x300/000/fff.png)
-
-
 # :iphone: TIF: Today I Felt
 
 지식은 책과 여러 자료로 부터 배우지만, `지혜`는 사람으로부터 배웁니다.
